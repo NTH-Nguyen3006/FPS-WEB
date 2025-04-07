@@ -1,0 +1,201 @@
+@import url('./boostrap.css');
+@import url('./motion.css');
+
+header {
+    box-shadow: #3a3a3a 0px 10px 10px;
+}
+
+nav {
+    font-weight: 600;
+}
+
+.navbar-brand>img,
+.nav-link {
+    transition: all 0.3s !important;
+    cursor: pointer;
+}
+
+.control {
+    width: 100px;
+    height: 50vh;
+    background-color: aqua;
+}
+
+.card-link {
+    color: var(--bs-emphasis-color);
+    text-decoration: none;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .35s;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.bd-links-link {
+    text-decoration: none;
+    color: var(--bs-emphasis-color);
+    font-size: 1em;
+}
+
+.bd-main h4 {
+    color: orangered;
+}
+
+.custom-shape-divider-bottom-1743687478 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg) translateY(-1px);
+}
+
+.custom-shape-divider-bottom-1743687478 svg {
+    position: relative;
+    display: block;
+    width: calc(160% + 1.3px);
+    height: 50vh;
+}
+
+.custom-shape-divider-bottom-1743687478 .shape-fill,
+.custom-shape-divider-top-1743691730 .shape-fill {
+    fill: #ff6a00;
+}
+
+.custom-shape-divider-top-1743691730 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1743691730 svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: auto;
+}
+
+.checkbox-wrapper-5 .check {
+    --size: 30px;
+
+    position: relative;
+    background: linear-gradient(90deg, rgba(207, 53, 26, 1) 0%, rgba(201, 135, 72, 1) 47%, rgba(255, 211, 147, 0.7791491596638656) 100%);
+    line-height: 0;
+    /* perspective: 400px; */
+    font-size: var(--size);
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"],
+.checkbox-wrapper-5 .check label,
+.checkbox-wrapper-5 .check label::before,
+.checkbox-wrapper-5 .check label::after,
+.checkbox-wrapper-5 .check {
+    appearance: none;
+    display: inline-block;
+    border-radius: var(--size);
+    border: 0;
+    transition: .35s ease-in-out;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-5 .check label {
+    width: calc(2.2 * var(--size));
+    height: var(--size);
+    background: #d7d7d7;
+    overflow: hidden;
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"] {
+    position: absolute;
+    z-index: 1;
+    width: calc(.8 * var(--size));
+    height: calc(.8 * var(--size));
+    top: calc(.1 * var(--size));
+    left: calc(.1 * var(--size));
+    background: linear-gradient(45deg, #dedede, #ffffff);
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
+    outline: none;
+    margin: 0;
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"]:checked {
+    left: calc(1.3 * var(--size));
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"]:checked+label {
+    background: transparent;
+}
+
+.checkbox-wrapper-5 .check label::before,
+.checkbox-wrapper-5 .check label::after {
+    position: absolute;
+    /* overflow: hidden; */
+    left: calc(.25 * var(--size));
+    top: calc(.3 * var(--size));
+    height: var(--size);
+    letter-spacing: calc(-0.04 * var(--size));
+    color: black;
+    z-index: 2;
+    border-radius: 0;
+    transform-origin: 0 0 calc(-0.5 * var(--size));
+    backface-visibility: hidden;
+}
+
+.check>.bi-moon-stars-fill::before {
+    font-size: calc(.4 * var(--size)) !important;
+}
+
+.check>.bi-brightness-high-fill::before {
+    font-size: calc(.5 * var(--size)) !important;
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"]:checked+label::before,
+.checkbox-wrapper-5 .check input[type="checkbox"]:checked+label::after {
+    left: calc(1.48 * var(--size));
+    top: calc(.45 * var(--size));
+    line-height: calc(.1 * var(--size));
+    transform: rotateY(360deg);
+}
+
+.checkbox-wrapper-5 .check input[type="checkbox"]:checked+label::after {
+    height: calc(.16 * var(--size));
+    top: calc(.5 * var(--size));
+    left: calc(1.45 * var(--size));
+    font-size: calc(.6 * var(--size));
+    line-height: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-link:hover {
+        color: orange !important;
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+    .navbar-brand>img:hover {
+        transform: rotate(-3deg) scale(1.1);
+    }
+
+    body>div {
+        margin: 0 auto;
+    }
+
+    .bd-layout {
+        display: grid;
+        grid-template-areas: "sidebar main";
+        grid-template-columns: 1fr 5fr;
+        gap: 1.5rem;
+    }
+
+    .bd-sidebar {
+        position: sticky;
+        top: 6em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-brand>img {
+        width: 200px;
+    }
+}

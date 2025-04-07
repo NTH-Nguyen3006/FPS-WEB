@@ -1,0 +1,62 @@
+.motion {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(200px);
+    transition: all 1s;
+}
+
+.tst-1 {
+    transition: all .3s;
+}
+
+.tst-2 {
+    transition: all .5s;
+}
+
+.tst-3 {
+    transition: all .8s;
+}
+
+.fade-right {
+    transform: translateX(-10%);
+}
+
+.fade-left {
+    transform: translateX(10%);
+}
+
+.fade-up {
+    transform: translateY(-200px);
+}
+
+.fade-down {
+    transform: translateY(200px);
+}
+
+.motion.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+.motion.delay-100 {
+    transition-delay: 100ms;
+}
+
+.motion.delay-200 {
+    transition-delay: 200ms;
+}
+
+.motion.delay-300 {
+    transition-delay: 300ms;
+}
+
+.motion.delay-400 {
+    transition-delay: 400ms;
+}
+
+@media (prefers-reduced-motion) {
+    .motion {
+        transition: none;
+    }
+}

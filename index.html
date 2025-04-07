@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/style.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler d-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a class="navbar-brand" href="./index.html" target="_self">
+                    <img width="250" src="./static/images/logo-fs.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-tabs me-auto mb-4 mb-lg-0 fs-5">
+                        <li class="nav-item cursor-pointer">
+                            <!--  onclick='redirect("home")' -->
+                            <a class="nav-link active" id="home" href="./" aria-current="page">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact" href="#contact" onclick='redirect("contact")'
+                                target="_self" data-bs-dismiss="navbarSupportedContent">
+                                Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">Góp ý</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./templates/interaction.html" target="_self">Hỏi - Đáp</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-flex align-items-centers pe-4">
+                            <div class="checkbox-wrapper-5 d-flex align-items-center">
+                                <div class="check">
+                                    <input id="check-5" type="checkbox" checked>
+                                    <label class="bi bi-brightness-high-fill" for="check-5"></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" href="#">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link active" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target="#registerModal" href="#">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="slider motion fade-up">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+            data-bs-ride="carousel">
+            <div class="carousel-inner lg">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-motion="true"></span>
+                    <span class="visually-motion"></span>
+                </button>
+                <div class="carousel-item active">
+                    <img src="./static/images/banner/1.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./static/images/banner/2.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./static/images/banner/3.png" class="d-block w-100">
+                </div>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-motion="true"></span>
+                    <span class="visually-motion"></span>
+                </button>
+            </div>
+        </div>
+        <div class="custom-shape-divider-top-1743691730 motion fade-up delay-300">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container-xl" id="content">
+        <div class="container-lg p-5">
+            <h3 class="text-center" style="color: var(--bs-success-text-emphasis);">Chương Trình Đào Tạo</h3>
+            <hr class="mb-5 mx-auto w-50">
+            <div class="majors px-3">
+                <style>
+                    .majors h5 {
+                        color: orangered;
+                    }
+
+                    .majors .card-text {
+                        font-weight: bold;
+                    }
+
+                    .majors .card-img-top {
+                        border-radius: 10px;
+                    }
+                </style>
+                <h5>Công Nghệ Thông Tin:</h5>
+                <div class="it-majors row row-cols-1 row-cols-md-3 gx-5 gy-4 mb-5">
+                    <article class="motion fade-right delay-400">
+                        <img class="card-img-top" src="./static/images/majors/it/LaptrinhGame-1200x628-1-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text"> Lập trình game</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-300">
+                        <img class="card-img-top" src="./static/images/majors/it/LapTrinhMoBile1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Lập trình mobile</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-200">
+                        <img class="card-img-top" src="./static/images/majors/it/LapTrinhWebsite1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Lập trình website</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-200">
+                        <img class="card-img-top" src="./static/images/majors/it/PhatTrienPhanMem1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Phát triển phần mềm</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-300">
+                        <img class="card-img-top" src="./static/images/majors/it/UngDungPhanMem1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Ứng dụng phần mềm</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-400">
+                        <img class="card-img-top" src="./static/images/majors/it/XuLyDuLieu1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Xử lý dữ liệu</p>
+                        </div>
+                    </article>
+                </div>
+
+                <h5>Quản Trị Kinh Doanh:</h5>
+                <div class="marketing row row-cols-1 row-cols-md-3 g-5 mb-5">
+                    <article class="motion fade-right delay-200">
+                        <img class="card-img-top"
+                            src="./static/images/majors/marketing/DigitalMarketing1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Digital Marketing</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-300">
+                        <img class="card-img-top" src="./static/images/majors/marketing/Logistic1200x628-2-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Logistic</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-400">
+                        <img class="card-img-top"
+                            src="./static/images/majors/marketing/FPT-Polytechnic-TCSK1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Truyền thông & tổ chức sự kiện</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-400">
+                        <img class="card-img-top"
+                            src="./static/images/majors/marketing/Marketing_Sale1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Marketing Sale</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-300">
+                        <img class="card-img-top"
+                            src="./static/images/majors/marketing/QuanTriDLLH1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Quản trị du lịch - lữ hành</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-200">
+                        <img class="card-img-top"
+                            src="./static/images/majors/marketing/QuanTriKSNH1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Quản trị nhà hàng - khách sạn</p>
+                        </div>
+                    </article>
+                </div>
+
+                <h5>Công Nghệ Kĩ Thuật Điều Kiển - Tự Động Hóa:</h5>
+                <div class="automatic row row-cols-1 row-cols-md-3 g-5 mb-5">
+                    <article class="motion fade-right delay-100">
+                        <img class="card-img-top" src="./static/images/majors/automatic/1Banner-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Kĩ thuật Điện - Điện tử</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-200">
+                        <img class="card-img-top" src="./static/images/majors/automatic/2Banner-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Điện công nghiệp</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-300">
+                        <img class="card-img-top" src="./static/images/majors/automatic/3Banner-2-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Công nghệ kĩ thuật</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-400">
+                        <img class="card-img-top" src="./static/images/majors/automatic/anh-1-01-580x386.jpeg">
+                        <div class="card-body">
+                            <p class="card-text">Chip & Bán dẫn</p>
+                        </div>
+                    </article>
+                </div>
+
+                <h4>Ngành khác:</h4>
+                <div class="others row row-cols-1 row-cols-md-3 g-5">
+                    <article class="motion fade-right delay-200">
+                        <img class="card-img-top" src="./static/images/majors/others/1-35-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Tiếng Hàn Quốc</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-300">
+                        <img class="card-img-top" src="./static/images/majors/others/2-32-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Tiếng Anh</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-400">
+                        <img class="card-img-top" src="./static/images/majors/others/3-32-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Tiếng Trung Quốc</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-200">
+                        <img class="card-img-top" src="./static/images/majors/others/4-2-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Tiếng Nhật</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-300">
+                        <img class="card-img-top" src="./static/images/majors/others/4Banner-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Kĩ thuật cơ khí</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-left delay-400">
+                        <img class="card-img-top" src="./static/images/majors/others/Duoc1200x628-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Dược</p>
+                        </div>
+                    </article>
+                    <article class="motion fade-right delay-100">
+                        <img class="card-img-top" src="./static/images/majors/others/TK_C4_90H-1-580x386.png">
+                        <div class="card-body">
+                            <p class="card-text">Thiết kế đồ họa</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="news w-100 p-5" style="background-color: var(--bs-secondary-bg); border-radius: 10px;">
+            <h3 class="pb-3" style="color: var(--bs-info-text-emphasis);">Tin Tức Nóng Hổi</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col motion delay-100">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-200">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-300">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-100">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-200">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-300">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/6.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-100">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/7.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-200">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/8.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col motion delay-300">
+                    <div class="card">
+                        <a class="card-link" href="#" target="_self">
+                            <img src="./static/images/news/9.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fb-root" class="w-100 d-none justify-content-center">
+        <div class="fb-comments w-50"
+            data-href="https://b759-2405-4802-93b2-9790-995c-6c3c-9150-50e9.ngrok-free.app/Assignment/index.html#contact"
+            data-width="100%" data-numposts="10"></div>
+    </div>
+
+    <footer class="position-relative motion">
+        <div class="custom-shape-divider-bottom-1743687478" align="center">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="w-100 z-1 fw-bold text-white pt-3" style="background-color: #ff6a00;">
+            <div class="container p-3">
+                <img class="pb-3" src="https://polyschool.fpt.edu.vn/wp-content/uploads/logo_fpoly.png">
+                <div class="icon-contact d-flex gap-3">
+                    <a class="link-underline link-underline-opacity-0 text-primary"
+                        href="https://www.facebook.com/fptpolyschool1" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                    <a class="link-underline link-underline-opacity-0 text-danger" target="_blank"
+                        href="https://www.youtube.com/channel/UCGF73SUAjkefBo9H9DZ_EZw?view_as=subscriber">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi-youtube" viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                        </svg>
+                    </a>
+                    <a class="link-underline link-underline-opacity-0 text-dark" target="_blank"
+                        href="https://www.tiktok.com/@fptpolyschool">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi-tiktok" viewBox="0 0 16 16">
+                            <path
+                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top" class="btn btn-warning icon-link-hover position-fixed" data-aos="fade-down"
+        style="bottom: 40px; right: 10%; --bs-icon-link-transform: translate3d(0, -.225rem, 0);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </a>
+
+    <a class="btn reigter-btn position-fixed bottom-0 end-0 fw-bold text-light"
+        style="width: 100px; height: 30px; background-color: orangered;">
+        Đăng Ký
+    </a>
+
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0&appId=1018852140249561"></script>
+    <script src="./static/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-motion="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng Nhập</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Tài Khoản:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Mật Khẩu</label>
+                        <input class="form-control" id="message-text" type="passwords">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-motion="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng Ký</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="account" class="col-form-label">Tài Khoản:</label>
+                        <input type="text" class="form-control" id="account">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="w-100">
+                            <label for="fist-name" class="col-form-label">Họ:</label>
+                            <input type="text" class="form-control" id="fist-name">
+                        </div>
+                        <div class="ms-2 w-100">
+                            <label for="name" class="col-form-label">Tên:</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwords" class="col-form-label">Mật Khẩu</label>
+                        <input class="form-control" id="passwords" type="passwords">
+                    </div>
+                    <div class="mb-3">
+                        <label for="comfirm-password" class="col-form-label">Xác nhận mật Khẩu:</label>
+                        <input class="form-control" id="comfirm-password" type="passwords">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary">Tạo tài khoản</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
